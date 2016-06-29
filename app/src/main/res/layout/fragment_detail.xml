@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.tourguide.DetailFragment">
+
+
+    <ImageView
+        android:id="@+id/headerimage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:src="@drawable/iowastatefair"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left|top"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:id="@+id/headerlayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Area515"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/detail_title"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_gravity="left|top" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/blanktextview"
+                android:layout_below="@id/detail_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="@string/place_type"
+                android:text="@string/place_type"
+                android:paddingTop="2dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/eventtype"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_below="@id/blanktextview" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerlayout"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/linearLayout"
+            android:background="@drawable/custom_border">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_phone_black_24dp"
+                tools:text="Call"
+                android:text="Call"
+                android:id="@+id/mainbuttonone"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryLight"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Save"
+                android:text="Save"
+                android:id="@+id/mainbuttontwo"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:drawableTop="@drawable/ic_favorite_black_24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/mainbuttonthree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Website"
+                tools:text="Website"
+                android:textColor="@color/colorAccent"
+                style="?android:attr/borderlessButtonStyle"
+                android:drawableTint="@color/colorAccent"
+                android:drawableTop="@drawable/ic_public_black_24dp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollView01"
+            android:layout_below="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/rowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/address_row"
+                        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                        android:drawablePadding="15dp"
+                        tools:text="1731 Grand Ave, Des Moines, IA"
+                        android:text="1731 Grand Ave, Des Moines, IA"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:drawableTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimaryText"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phone_row"
+                        android:layout_below="@id/address_row"
+                        android:drawableLeft="@drawable/ic_phone_black_24dp"
+                        android:drawablePadding="15dp"
+                        tools:text="(515) 867-5309"
+                        android:text="(515) 867-5309"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:drawableTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimaryText"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/website_row"
+                        android:layout_below="@id/phone_row"
+                        android:drawableLeft="@drawable/ic_public_black_24dp"
+                        android:drawablePadding="15dp"
+                        tools:text="https://area515.org/"
+                        android:text="https://area515.org/"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:drawableTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimaryText"/>
+
+
+                    <FrameLayout
+                        android:id="@+id/detail_header_container"
+                        android:layout_below="@+id/website_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/detail_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MORE INFO"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/darker_gray"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/detail_content"
+                        android:layout_below="@+id/detail_header_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="The Des Moines Makerspace is a non-profit community of makers, artists, and hobbyists. Our shared workspace offers the tools and resources you need to make your projects a reality. Need help? Our informal classes, user groups, and shared expertise will help you develop the skills you need to finally start your dream project."
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
