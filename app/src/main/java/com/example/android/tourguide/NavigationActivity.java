@@ -25,9 +25,6 @@ public class NavigationActivity extends AppCompatActivity
         DesMoinesFragment.OnFragmentInteractionListener,
         DetailFragment.OnFragmentInteractionListener{
 
-    private Model selectedModel;
-    public Model getSelectedModel(){return selectedModel;}
-    public void setSelectedModel(Model model){this.selectedModel = model;}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +50,12 @@ public class NavigationActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().getItem(0).setChecked(true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, DesMoinesFragment.newInstance()).commit();
-
+        if(fragmentManager.getFragments().size() == 0) {
+            navigationView.getMenu().getItem(0).setChecked(true);
+            fragmentManager.beginTransaction().replace(R.id.container, DesMoinesFragment.newInstance()).commit();
+        }
     }
 
     @Override
@@ -94,10 +92,9 @@ public class NavigationActivity extends AppCompatActivity
 
     public void openDetails(Model model){
 
-        setSelectedModel(model);
         // start details fragment with incoming model
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container,DetailFragment.newInstance()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.container,DetailFragment.newInstance(model)).addToBackStack(null).commit();
 
     }
 
@@ -105,51 +102,10 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public void onPause(){
         super.onPause();
-        if(getSelectedModel()!= null) {
-            SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            if(getSelectedModel().getId() != null) {
-                editor.putString("id", getSelectedModel().getId());
-            }
-            if(getSelectedModel().getName() != null) {
-                editor.putString("name", getSelectedModel().getName());
-            }
-            if(getSelectedModel().getAddress() != null) {
-                editor.putString("address", getSelectedModel().getAddress());
-            }
-            if (getSelectedModel().getPhone() != null) {
-                editor.putString("phone", getSelectedModel().getPhone());
-            }
-            if (getSelectedModel().getWebsite() != null) {
-                editor.putString("website", getSelectedModel().getWebsite());
-            }
-            if (getSelectedModel().getDetails() != null) {
-                editor.putString("details", getSelectedModel().getDetails());
-            }
-            if (getSelectedModel().getImageResourceId() != 0) {
-                editor.putInt("imageResourceid", getSelectedModel().getImageResourceId());
-            }
-            editor.commit();
-        }
-
-
     }
     @Override
     public void onResume(){
         super.onResume();
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        String id = sharedPref.getString("id",null);
-        if(id != null){
-            Model restore = new Model();
-            restore.setId(id);
-            restore.setName(sharedPref.getString("name",""));
-            restore.setAddress(sharedPref.getString("address",""));
-            restore.setPhone(sharedPref.getString("phone",""));
-            restore.setWebsite(sharedPref.getString("website",""));
-            restore.setDetails(sharedPref.getString("details",""));
-            restore.setImageResourceId(sharedPref.getInt("imageResourceId",0));
-            setSelectedModel(restore);
-        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

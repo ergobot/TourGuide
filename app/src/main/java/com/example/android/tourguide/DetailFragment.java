@@ -77,6 +77,15 @@ public class DetailFragment extends Fragment {
         return fragment;
     }
 
+    public static DetailFragment newInstance(Model selectedModel) {
+        DetailFragment fragment = new DetailFragment();
+        Bundle args = new Bundle();
+        args.putSerializable("selectedModel",selectedModel);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+
     // no args
     public static DetailFragment newInstance() {
         DetailFragment fragment = new DetailFragment();
@@ -88,11 +97,22 @@ public class DetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            this.model = (Model) getArguments().getSerializable("selectedModel");
         }
 
+        // retain this fragment
+        setRetainInstance(true);
+
     }
+
+    public void setData(Model restoreObject) {
+        this.model = restoreObject;
+    }
+
+    public Model getData() {
+        return this.model;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -114,7 +134,7 @@ public class DetailFragment extends Fragment {
         detailsHeader = (FrameLayout) rootView.findViewById(R.id.detail_header_container);
         details = (TextView) rootView.findViewById(R.id.detail_content);
 
-        model = ((NavigationActivity)getActivity()).getSelectedModel();
+//        model = ((NavigationActivity)getActivity()).getSelectedModel();
         imageView.setImageResource(model.getImageResourceId());
         title.setText(model.getName());
 

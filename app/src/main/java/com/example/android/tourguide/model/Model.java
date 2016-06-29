@@ -1,8 +1,9 @@
 package com.example.android.tourguide.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Model {
+public class Model implements Serializable{
 
 	public Model(){}
 	String id;
