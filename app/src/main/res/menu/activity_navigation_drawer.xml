@@ -3,21 +3,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Des Moines" />
-        <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_desmoines"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Ames" />
+            android:title="@string/title_desmoines" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Iowa City" />
+            android:id="@+id/nav_ames"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/title_ames" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Debuque" />
+            android:id="@+id/nav_iowacity"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/title_iowacity" />
+        <item
+            android:id="@+id/nav_dubuque"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/title_dubuque" />
     </group>
 
 

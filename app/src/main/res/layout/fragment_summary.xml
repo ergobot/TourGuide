@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_300"
-    tools:context="com.example.android.tourguide.DesMoinesFragment">
+    tools:context="com.example.android.tourguide.SummaryFragment">
 
     <RelativeLayout
 
@@ -17,7 +17,6 @@
             android:padding ="16dp"
             android:gravity="center_horizontal"
             android:background="@color/cardview_light_background"
-            android:text="@string/title_desmoines"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <android.support.v7.widget.RecyclerView
