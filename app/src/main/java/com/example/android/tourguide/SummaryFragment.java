@@ -211,31 +211,35 @@ public class SummaryFragment extends Fragment {
         mAdapter.notifyDataSetChanged();
     }
 
+    public int getImageResourceFromString(String drawableName){
+        return getResources().getIdentifier(drawableName, "drawable", getActivity().getApplicationContext().getPackageName());
+    }
+
     public void loadDesMoinesData(){
         models = new ArrayList<Model>();
         Model capitalBuilding = new Model();
-        capitalBuilding.setId("1");
-        capitalBuilding.setName("Capitol Building");
-        capitalBuilding.setAddress("1007 E Grand Ave, Des Moines, IA 50319");
-        capitalBuilding.setPhone("515-281-5591");
-        capitalBuilding.setWebsite("https://www.legis.iowa.gov/docs/LIO/Info/IowaCapitolTours.pdf");
-        capitalBuilding.setDetails("Located at East 9th Street and Grand Avenue, the capitol is set atop a hill and offers a panoramic view of the city's downtown and the West capitol Terrace. Various monuments and memorials are to its sides and front, including the Soldiers and Sailors' Monument and the Lincoln and Tad statue.");
-        capitalBuilding.setImageResourceId(R.drawable.capitol);
+        capitalBuilding.setId(getResources().getString(R.string.capitolbuilding_id));
+        capitalBuilding.setName(getResources().getString(R.string.capitolbuilding_name));
+        capitalBuilding.setAddress(getResources().getString(R.string.capitolbuilding_address));
+        capitalBuilding.setPhone(getResources().getString(R.string.capitolbuilding_phone));
+        capitalBuilding.setWebsite(getResources().getString(R.string.capitolbuilding_website));
+        capitalBuilding.setDetails(getResources().getString(R.string.capitolbuilding_details));
+        capitalBuilding.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.capitolbuilding_imageresourceid)));
         Model iowaStateFair = new Model();
-        iowaStateFair.setId("2");
-        iowaStateFair.setName("Iowa State Fair");
-        iowaStateFair.setAddress("E. 30th St. and University Ave., Des Moines, IA 50319");
-        iowaStateFair.setPhone("515-262-3111");
-        iowaStateFair.setWebsite("http://www.iowastatefair.org/");
-        iowaStateFair.setDetails("The Iowa State Fair is an annual state fair held in Des Moines, Iowa over 11 days in August and is one of the largest state fairs in the country.");
-        iowaStateFair.setImageResourceId(R.drawable.iowastatefair);
+        iowaStateFair.setId(getResources().getString(R.string.iowastatefair_id));
+        iowaStateFair.setName(getResources().getString(R.string.iowastatefair_name));
+        iowaStateFair.setAddress(getResources().getString(R.string.iowastatefair_address));
+        iowaStateFair.setPhone(getResources().getString(R.string.iowastatefair_phone));
+        iowaStateFair.setWebsite(getResources().getString(R.string.iowastatefair_website));
+        iowaStateFair.setDetails(getResources().getString(R.string.iowastatefair_details));
+        iowaStateFair.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.iowastatefair_imageresourceid)));
         Model farmersMarket = new Model();
-        farmersMarket.setId("3");
-        farmersMarket.setName("Farmers Market");
-        farmersMarket.setAddress("4th Street and Court Avenue, Des Moines, IA 50314");
-        farmersMarket.setWebsite("www.desmoinesfarmersmarket.com/");
-        farmersMarket.setDetails("Throughout the summer, the Court Avenue District plays home to the nationally recognized Downtown Des Moines Farmers Market. The Market boast over 300 vendors and is free and open to the public. Additionally, the Des Moines Bicycle Collective offers free valet parking for bikes, which is a unique feature of the Des Moines Farmers Market.");
-        farmersMarket.setImageResourceId(R.drawable.farmersmarket);
+        farmersMarket.setId(getResources().getString(R.string.farmersmarket_id));
+        farmersMarket.setName(getResources().getString(R.string.farmersmarket_name));
+        farmersMarket.setAddress(getResources().getString(R.string.farmersmarket_address));
+        farmersMarket.setWebsite(getResources().getString(R.string.farmersmarket_website));
+        farmersMarket.setDetails(getResources().getString(R.string.farmersmarket_details));
+        farmersMarket.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.farmersmarket_imageresourceid)));
         models.add(capitalBuilding);
         models.add(iowaStateFair);
         models.add(farmersMarket);
@@ -243,31 +247,31 @@ public class SummaryFragment extends Fragment {
     public void loadAmesData(){
         models = new ArrayList<Model>();
         Model isu = new Model();
-        isu.setId("1");
-        isu.setName("Iowa State University");
-        isu.setAddress("Ames, IA 50011");
-        isu.setPhone("515-294-4111");
-        isu.setWebsite("http://www.iastate.edu/");
-        isu.setDetails("Iowa State University of Science and Technology is a public flagship land-grant and space-grant research university located in Ames, Iowa, United States. Iowa State is classified as a Research University with very high research activity (RU/VH) by the Carnegie Foundation for the Advancement of Teaching. Iowa State is also a member of the prestigious American Association of Universities (AAU).");
-        isu.setImageResourceId(R.drawable.isulogo);
+        isu.setId(getResources().getString(R.string.isu_id));
+        isu.setName(getResources().getString(R.string.isu_name));
+        isu.setAddress(getResources().getString(R.string.isu_address));
+        isu.setPhone(getResources().getString(R.string.isu_phone));
+        isu.setWebsite(getResources().getString(R.string.isu_website));
+        isu.setDetails(getResources().getString(R.string.isu_details));
+        isu.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.isu_imageresourceid)));
 
         Model gardens = new Model();
-        gardens.setId("2");
-        gardens.setName("Reiman Gardens");
-        gardens.setAddress("1407 University Blvd, Ames, IA 50011");
-        gardens.setPhone("515-294-2710");
-        gardens.setWebsite("https://www.reimangardens.com/");
-        gardens.setDetails("Reiman Gardens consists of a dozen distinct garden areas, an indoor conservatory and an indoor butterfly \"wing\", butterfly emergence cases, a gift shop, and several supporting greenhouses.");
-        gardens.setImageResourceId(R.drawable.reimangardens);
+        gardens.setId(getResources().getString(R.string.gardens_id));
+        gardens.setName(getResources().getString(R.string.gardens_name));
+        gardens.setAddress(getResources().getString(R.string.gardens_address));
+        gardens.setPhone(getResources().getString(R.string.gardens_phone));
+        gardens.setWebsite(getResources().getString(R.string.gardens_website));
+        gardens.setDetails(getResources().getString(R.string.gardens_details));
+        gardens.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.gardens_imageresourceid)));
 
         Model artMuseum = new Model();
-        artMuseum.setId("3");
-        artMuseum.setName("Brunnier Art Museum");
-        artMuseum.setAddress("290 Scheman Bldg, Ames, IA");
-        artMuseum.setPhone("515-294-4442");
-        artMuseum.setWebsite("http://www.museums.iastate.edu/");
-        artMuseum.setDetails("The Brunnier Art Museum, Iowa’s only accredited museum emphasizing a decorative arts collection, is one of the nation's few museums located within a performing arts and conference complex, the Iowa State Center. Founded in 1975, the museum is named after its benefactors, Iowa State alumnus Henry J. Brunnier and his wife Ann. The decorative arts collection they donated, called the Brunnier Collection, is extensive, consisting of ceramics, glass, dolls, ivory, jade, and enameled metals.");
-        artMuseum.setImageResourceId(R.drawable.artmuseum);
+        artMuseum.setId(getResources().getString(R.string.artmuseum_id));
+        artMuseum.setName(getResources().getString(R.string.artmuseum_name));
+        artMuseum.setAddress(getResources().getString(R.string.artmuseum_address));
+        artMuseum.setPhone(getResources().getString(R.string.artmuseum_phone));
+        artMuseum.setWebsite(getResources().getString(R.string.artmuseum_website));
+        artMuseum.setDetails(getResources().getString(R.string.artmuseum_details));
+        artMuseum.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.artmuseum_imageresourceid)));
 
         models.add(isu);
         models.add(gardens);
@@ -278,31 +282,31 @@ public class SummaryFragment extends Fragment {
         models = new ArrayList<Model>();
 
         Model uofi = new Model();
-        uofi.setId("1");
-        uofi.setName("University of Iowa");
-        uofi.setAddress("Iowa City, IA 52242");
-        uofi.setPhone("319-335-3500");
-        uofi.setWebsite("http://www.uiowa.edu/");
-        uofi.setDetails("The Iowa campus spans 1,700 acres centered along the banks of the Iowa River and includes the University of Iowa Hospitals and Clinics, named one of \\\"America’s Best Hospitals\\\" for the 25th year in a row. The university was the original developer of the Master of Fine Arts degree and it operates the world-renowned Iowa Writers’ Workshop.");
-        uofi.setImageResourceId(R.drawable.uofi);
+        uofi.setId(getResources().getString(R.string.uofi_id));
+        uofi.setName(getResources().getString(R.string.uofi_name));
+        uofi.setAddress(getResources().getString(R.string.uofi_address));
+        uofi.setPhone(getResources().getString(R.string.uofi_phone));
+        uofi.setWebsite(getResources().getString(R.string.uofi_website));
+        uofi.setDetails(getResources().getString(R.string.uofi_details));
+        uofi.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.uofi_imageresourceid)));
 
         Model fossils = new Model();
-        fossils.setId("2");
-        fossils.setName("Devonian Fossil Gorge");
-        fossils.setAddress("Iowa City, IA");
-        fossils.setPhone("515-867-5309");
-        fossils.setWebsite("http://www.mvr.usace.army.mil/Missions/Recreation/Coralville-Lake/Recreation/Devonian-Fossil-Gorge/");
-        fossils.setDetails("Imagine walking on a 375 million year old ocean floor! This glimpse into Iowa's geologic past was first exposed during the Floods of 1993 at Coralville Lake, then again more were exposed during the Floods of 2008. The fossils and limestone bedrock of the Devonian Fossil Gorge date back almost 200 million years before the dinosaurs!");
-        fossils.setImageResourceId(R.drawable.fossils);
+        fossils.setId(getResources().getString(R.string.fossils_id));
+        fossils.setName(getResources().getString(R.string.fossils_name));
+        fossils.setAddress(getResources().getString(R.string.fossils_address));
+        fossils.setPhone(getResources().getString(R.string.fossils_phone));
+        fossils.setWebsite(getResources().getString(R.string.fossils_website));
+        fossils.setDetails(getResources().getString(R.string.fossils_details));
+        fossils.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.fossils_imageresourceid)));
 
         Model orchard = new Model();
-        orchard.setId("3");
-        orchard.setName("Wilson Orchard");
-        orchard.setAddress("2924 Orchard Lane NE, Iowa City, IA 52240");
-        orchard.setPhone("319-354-5651");
-        orchard.setWebsite("http://www.wilsonsorchard.com/");
-        orchard.setDetails("Wilson’s is part nature park, part orchard. Surrounded by old oak forest, the farm occupies both sides of a valley with Rapid Creek winding through the land. Joyce and Robert ‘Chug’ Wilson first fell in love with this ground in 1980 and set to work building an orchard of apples that tasted like apples should. They planted over 120 varieties over the years, all chosen based on one simple criterion: great taste.");
-        orchard.setImageResourceId(R.drawable.orchard);
+        orchard.setId(getResources().getString(R.string.orchard_id));
+        orchard.setName(getResources().getString(R.string.orchard_name));
+        orchard.setAddress(getResources().getString(R.string.orchard_address));
+        orchard.setPhone(getResources().getString(R.string.orchard_phone));
+        orchard.setWebsite(getResources().getString(R.string.orchard_website));
+        orchard.setDetails(getResources().getString(R.string.orchard_details));
+        orchard.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.orchard_imageresourceid)));
 
         models.add(uofi);
         models.add(fossils);
@@ -313,31 +317,31 @@ public class SummaryFragment extends Fragment {
         models = new ArrayList<Model>();
 
         Model aquarium = new Model();
-        aquarium.setId("1");
-        aquarium.setName("National Mississippi River Museum & Aquarium");
-        aquarium.setAddress("350 East Third Street, Port of Dubuque, Dubuque, IA 52001");
-        aquarium.setPhone("800-226-3369");
-        aquarium.setWebsite("http://www.rivermuseum.com/");
-        aquarium.setDetails("The National Mississippi River Museum & Aquarium is home to museum exhibits on the culture and history of America's rivers. The campus also includes over a dozen aquariums featuring wildlife representative of that found in the Mississippi River and the Gulf of Mexico and other river systems and deltas, including giant catfish, sturgeon, ducks, frogs, turtles, rays, octopus, river otters, and more. There are also outdoor exhibits, featuring river otters, a marsh, and large artifacts, such as steam boilers, boats, a blacksmith shop, a stream, and raptor aviaries including bald eagles.");
-        aquarium.setImageResourceId(R.drawable.aquarium);
+        aquarium.setId(getResources().getString(R.string.aquarium_id));
+        aquarium.setName(getResources().getString(R.string.aquarium_name));
+        aquarium.setAddress(getResources().getString(R.string.aquarium_address));
+        aquarium.setPhone(getResources().getString(R.string.aquarium_phone));
+        aquarium.setWebsite(getResources().getString(R.string.aquarium_website));
+        aquarium.setDetails(getResources().getString(R.string.aquarium_details));
+        aquarium.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.aquarium_imageresourceid)));
 
         Model elevator = new Model();
-        elevator.setId("2");
-        elevator.setName("Fenelon Place Elevator Co.");
-        elevator.setAddress("512 Fenelon Place, Cable Car Square, Dubuque, IA 52001");
-        elevator.setPhone("563-582-6496");
-        elevator.setWebsite("http://www.fenelonplaceelevator.com/");
-        elevator.setDetails("The Fenelon Place Elevator is a 3 ft (914 mm) narrow gauge funicular railway located in Dubuque, Iowa. Also known as the Fourth Street Elevator, it is claimed to be the shortest and steepest railroad in the world (although several other funiculars also make this claim). It is listed in the National Register of Historic Places.");
-        elevator.setImageResourceId(R.drawable.elevator);
+        elevator.setId(getResources().getString(R.string.elevator_id));
+        elevator.setName(getResources().getString(R.string.elevator_name));
+        elevator.setAddress(getResources().getString(R.string.elevator_address));
+        elevator.setPhone(getResources().getString(R.string.elevator_phone));
+        elevator.setWebsite(getResources().getString(R.string.elevator_website));
+        elevator.setDetails(getResources().getString(R.string.elevator_details));
+        elevator.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.elevator_imageresourceid)));
 
         Model park = new Model();
-        park.setId("3");
-        park.setName("Eagle Point Park");
-        park.setAddress("Shiras Avenue, Dubuque, IA 52004");
-        park.setPhone("563-589-4263");
-        park.setWebsite("http://www.cityofdubuque.org/573/Eagle-Point-Park");
-        park.setDetails("The Riverwalk, situated along the edge of the bluff, has views of the Mississippi, the Lock and Dam, the city of Dubuque, and Grant County, Wisconsin. The park offers tennis courts, horseshoe pits, playground equipment, a band shell with free music concerts, and a small wading pool for young children.");
-        park.setImageResourceId(R.drawable.park);
+        park.setId(getResources().getString(R.string.park_id));
+        park.setName(getResources().getString(R.string.park_name));
+        park.setAddress(getResources().getString(R.string.park_address));
+        park.setPhone(getResources().getString(R.string.park_phone));
+        park.setWebsite(getResources().getString(R.string.park_website));
+        park.setDetails(getResources().getString(R.string.park_details));
+        park.setImageResourceId(getImageResourceFromString(getResources().getString(R.string.park_imageresourceid)));
 
         models.add(aquarium);
         models.add(elevator);

@@ -16,4 +16,103 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Place data -->
+    <string name="capitolbuilding_id">1</string>
+    <string name="capitolbuilding_name">Capitol Building</string>
+    <string name="capitolbuilding_address">1007 E Grand Ave, Des Moines, IA 50319</string>
+    <string name="capitolbuilding_phone">515-281-5591</string>
+    <string name="capitolbuilding_website">https://www.legis.iowa.gov/docs/LIO/Info/IowaCapitolTours.pdf</string>
+    <string name="capitolbuilding_details">Located at East 9th Street and Grand Avenue, the capitol is set atop a hill and offers a panoramic view of the city\'s downtown and the West capitol Terrace. Various monuments and memorials are to its sides and front, including the Soldiers and Sailors\' Monument and the Lincoln and Tad statue.</string>
+    <string name="capitolbuilding_imageresourceid">capitol</string>
+
+    <string name="iowastatefair_id">2</string>
+    <string name="iowastatefair_name">Iowa State Fair</string>
+    <string name="iowastatefair_address">E. 30th St. and University Ave., Des Moines, IA 50319</string>
+    <string name="iowastatefair_phone">515-262-3111</string>
+    <string name="iowastatefair_website">http://www.iowastatefair.org/</string>
+    <string name="iowastatefair_details">The Iowa State Fair is an annual state fair held in Des Moines, Iowa over 11 days in August and is one of the largest state fairs in the country.</string>
+    <string name="iowastatefair_imageresourceid">iowastatefair</string>
+
+    <string name="farmersmarket_id">3</string>
+    <string name="farmersmarket_name">Farmers Market</string>
+    <string name="farmersmarket_address">4th Street and Court Avenue, Des Moines, IA 50314</string>
+    <string name="farmersmarket_website">www.desmoinesfarmersmarket.com/</string>
+    <string name="farmersmarket_details">Throughout the summer, the Court Avenue District plays home to the nationally recognized Downtown Des Moines Farmers Market. The Market boast over 300 vendors and is free and open to the public. Additionally, the Des Moines Bicycle Collective offers free valet parking for bikes, which is a unique feature of the Des Moines Farmers Market.</string>
+    <string name="farmersmarket_imageresourceid">farmersmarket</string>
+
+    <string name="isu_id">1</string>
+    <string name="isu_name">Iowa State University</string>
+    <string name="isu_address">Ames, IA 50011</string>
+    <string name="isu_phone">515-294-4111</string>
+    <string name="isu_website">http://www.iastate.edu/</string>
+    <string name="isu_details">Iowa State University of Science and Technology is a public flagship land-grant and space-grant research university located in Ames, Iowa, United States. Iowa State is classified as a Research University with very high research activity (RU/VH) by the Carnegie Foundation for the Advancement of Teaching. Iowa State is also a member of the prestigious American Association of Universities (AAU).</string>
+    <string name="isu_imageresourceid">isulogo</string>
+
+
+    <string name="gardens_id">2</string>
+    <string name="gardens_name">Reiman Gardens</string>
+    <string name="gardens_address">1407 University Blvd, Ames, IA 50011</string>
+    <string name="gardens_phone">515-294-2710</string>
+    <string name="gardens_website">https://www.reimangardens.com/</string>
+    <string name="gardens_details">Reiman Gardens consists of a dozen distinct garden areas, an indoor conservatory and an indoor butterfly \"wing\", butterfly emergence cases, a gift shop, and several supporting greenhouses.</string>
+    <string name="gardens_imageresourceid">reimangardens</string>
+
+    <string name="artmuseum_id">3</string>
+    <string name="artmuseum_name">Brunnier Art Museum</string>
+    <string name="artmuseum_address">290 Scheman Bldg, Ames, IA</string>
+    <string name="artmuseum_phone">515-294-4442</string>
+    <string name="artmuseum_website">http://www.museums.iastate.edu/</string>
+    <string name="artmuseum_details">The Brunnier Art Museum, Iowa’s only accredited museum emphasizing a decorative arts collection, is one of the nation\'s few museums located within a performing arts and conference complex, the Iowa State Center. Founded in 1975, the museum is named after its benefactors, Iowa State alumnus Henry J. Brunnier and his wife Ann. The decorative arts collection they donated, called the Brunnier Collection, is extensive, consisting of ceramics, glass, dolls, ivory, jade, and enameled metals.</string>
+    <string name="artmuseum_imageresourceid">artmuseum</string>
+
+    <string name="uofi_id">1</string>
+    <string name="uofi_name">University of Iowa</string>
+    <string name="uofi_address">Iowa City, IA 52242</string>
+    <string name="uofi_phone">319-335-3500</string>
+    <string name="uofi_website">http://www.uiowa.edu/</string>
+    <string name="uofi_details">The Iowa campus spans 1,700 acres centered along the banks of the Iowa River and includes the University of Iowa Hospitals and Clinics, named one of \\\"America’s Best Hospitals\\\" for the 25th year in a row. The university was the original developer of the Master of Fine Arts degree and it operates the world-renowned Iowa Writers’ Workshop.</string>
+    <string name="uofi_imageresourceid">uofi</string>
+
+    <string name="fossils_id">2</string>
+    <string name="fossils_name">Devonian Fossil Gorge</string>
+    <string name="fossils_address">Iowa City, IA</string>
+    <string name="fossils_phone">515-867-5309</string>
+    <string name="fossils_website">http://www.mvr.usace.army.mil/Missions/Recreation/Coralville-Lake/Recreation/Devonian-Fossil-Gorge/</string>
+    <string name="fossils_details">Imagine walking on a 375 million year old ocean floor! This glimpse into Iowa\'s geologic past was first exposed during the Floods of 1993 at Coralville Lake, then again more were exposed during the Floods of 2008. The fossils and limestone bedrock of the Devonian Fossil Gorge date back almost 200 million years before the dinosaurs!</string>
+    <string name="fossils_imageresourceid">fossils</string>
+
+    <string name="orchard_id">3</string>
+    <string name="orchard_name">Wilson Orchard</string>
+    <string name="orchard_address">2924 Orchard Lane NE, Iowa City, IA 52240</string>
+    <string name="orchard_phone">319-354-5651</string>
+    <string name="orchard_website">http://www.wilsonsorchard.com/</string>
+    <string name="orchard_details">Wilson’s is part nature park, part orchard. Surrounded by old oak forest, the farm occupies both sides of a valley with Rapid Creek winding through the land. Joyce and Robert ‘Chug’ Wilson first fell in love with this ground in 1980 and set to work building an orchard of apples that tasted like apples should. They planted over 120 varieties over the years, all chosen based on one simple criterion: great taste.</string>
+    <string name="orchard_imageresourceid">orchard</string>
+
+    <string name="aquarium_id">1</string>
+    <string name="aquarium_name">National Mississippi River Museum &amp; Aquarium</string>
+    <string name="aquarium_address">350 East Third Street, Port of Dubuque, Dubuque, IA 52001</string>
+    <string name="aquarium_phone">800-226-3369</string>
+    <string name="aquarium_website">http://www.rivermuseum.com/</string>
+    <string name="aquarium_details">The National Mississippi River Museum &amp; Aquarium is home to museum exhibits on the culture and history of America\'s rivers. The campus also includes over a dozen aquariums featuring wildlife representative of that found in the Mississippi River and the Gulf of Mexico and other river systems and deltas, including giant catfish, sturgeon, ducks, frogs, turtles, rays, octopus, river otters, and more. There are also outdoor exhibits, featuring river otters, a marsh, and large artifacts, such as steam boilers, boats, a blacksmith shop, a stream, and raptor aviaries including bald eagles.</string>
+    <string name="aquarium_imageresourceid">aquarium</string>
+
+    <string name="elevator_id">2</string>
+    <string name="elevator_name">Fenelon Place Elevator Co.</string>
+    <string name="elevator_address">512 Fenelon Place, Cable Car Square, Dubuque, IA 52001</string>
+    <string name="elevator_phone">563-582-6496</string>
+    <string name="elevator_website">http://www.fenelonplaceelevator.com/</string>
+    <string name="elevator_details">The Fenelon Place Elevator is a 3 ft (914 mm) narrow gauge funicular railway located in Dubuque, Iowa. Also known as the Fourth Street Elevator, it is claimed to be the shortest and steepest railroad in the world (although several other funiculars also make this claim). It is listed in the National Register of Historic Places.</string>
+    <string name="elevator_imageresourceid">elevator</string>
+
+    <string name="park_id">3</string>
+    <string name="park_name">Eagle Point Park</string>
+    <string name="park_address">Shiras Avenue, Dubuque, IA 52004</string>
+    <string name="park_phone">563-589-4263</string>
+    <string name="park_website">http://www.cityofdubuque.org/573/Eagle-Point-Park</string>
+    <string name="park_details">The Riverwalk, situated along the edge of the bluff, has views of the Mississippi, the Lock and Dam, the city of Dubuque, and Grant County, Wisconsin. The park offers tennis courts, horseshoe pits, playground equipment, a band shell with free music concerts, and a small wading pool for young children.</string>
+    <string name="park_imageresourceid">park</string>
+
 </resources>
